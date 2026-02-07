@@ -8,7 +8,10 @@ const prisma = new PrismaClient();
  */
 export const createUser = async (req, res) => {
   try {
+    console.log("Api is running")
     const { name, email, password, role } = req.body;
+
+    console.log(req.body)
 
     const user = await prisma.user.create({
       data: {
@@ -24,17 +27,14 @@ export const createUser = async (req, res) => {
       data: user,
     });
   } catch (error) {
-    res.status(400).json({
+    res.status(500).json({
       success: false,
       message: error.message,
     });
+    console.log(error)
   }
 };
 
-/**
- * GET /users
- * Get all users
- */
 export const getUsers = async (req, res) => {
   try {
     const users = await prisma.user.findMany();
