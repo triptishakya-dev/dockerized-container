@@ -22,3 +22,4 @@ EXPOSE 3000
 
 # Run the node.js index.js 
 CMD ["node" , "index.js"]
+
