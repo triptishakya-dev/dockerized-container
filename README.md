@@ -63,7 +63,6 @@ Before running this application, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [Docker](https://www.docker.com/) and Docker Compose
-- [Git](https://git-scm.com/)
 
 ## 🚀 Installation
 
